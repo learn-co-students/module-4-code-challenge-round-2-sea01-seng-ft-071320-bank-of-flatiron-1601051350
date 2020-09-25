@@ -1,14 +1,28 @@
 import React from "react";
 
-const Transaction = () => {
+export default function Transaction({
+  id,
+  date,
+  description,
+  category,
+  amount,
+  delTransaction,
+}) {
   return (
     <tr>
-      <td>{"your code here..."}</td>
-      <td>{"your code here..."}</td>
-      <td>{"your code here..."}</td>
-      <td>{"your code here..."}</td>
+      <td>{date}</td>
+      <td>
+        {description}{" "}
+        <button
+          className="delBtn"
+        
+          onClick={() => delTransaction(id)}
+        >
+          X
+        </button>
+      </td>
+      <td>{category}</td>
+      <td>{amount}</td>
     </tr>
   );
-};
-
-export default Transaction;
+}
