@@ -7,6 +7,10 @@ class AccountContainer extends Component {
   state = {
     transactions: [],
     search: "",
+    date: "",
+    description: "",
+    category: "",
+    amount: 0,
   };
 
   componentDidMount() {
@@ -27,6 +31,13 @@ class AccountContainer extends Component {
     //console.log(transactions);
   };
 
+  AddTransactions = (e) => {
+    console.log(e.target.value);
+    this.setState({
+      [e.target.key]: e.target.value,
+    });
+  };
+
   render() {
     //console.log(this.state.search);
     const { transactions } = this.state;
@@ -34,7 +45,7 @@ class AccountContainer extends Component {
     return (
       <div>
         <Search handleSearch={this.handleSearch} />
-        <AddTransactionForm />
+        <AddTransactionForm AddTransactions={this.AddTransactions} />
         <TransactionsList transactions={this.filterTransactions()} />
       </div>
     );
