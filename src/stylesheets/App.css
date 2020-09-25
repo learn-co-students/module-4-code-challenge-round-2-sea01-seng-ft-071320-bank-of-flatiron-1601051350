@@ -5,8 +5,8 @@
 
 input {
   width: 25% !important;
-  margin-right: 0.25em!important;
-  margin-left: 0.25em!important;
+  margin-right: 0.25em !important;
+  margin-left: 0.25em !important;
 }
 
 body {
@@ -19,9 +19,31 @@ body {
   text-align: center;
 }
 
-
 .App-header {
   background-color: #222;
   padding: 20px;
   color: white;
+}
+
+.sortable {
+  cursor: pointer;
+}
+
+.sortable:hover {
+  background-color: #99ffdd;
+}
+
+.sorted {
+  background-color: #ccffee;
+}
+
+.delBtn {
+  border-radius: 15px;
+  border: none;
+  background-color: #ff4d2e;
+}
+
+.delBtn:hover {
+  background-color: #ff3814;
+  cursor: pointer;
 }
