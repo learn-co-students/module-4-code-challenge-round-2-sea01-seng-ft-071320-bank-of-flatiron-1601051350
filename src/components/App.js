@@ -3,6 +3,13 @@ import AccountContainer from "./AccountContainer";
 import "../stylesheets/App.css";
 
 class App extends Component {
+
+  componentDidMount () {
+    fetch('http://localhost:6001/transactions')
+    .then(res => res.json())
+    .then(console.log)
+
+  }
   render() {
     return (
       <div className="ui raised segment">
